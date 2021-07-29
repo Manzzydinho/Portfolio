@@ -7,6 +7,72 @@
     <title>About</title>
     <link rel="stylesheet" href="styling.css">
 </head>
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+    .column > img{
+      animation-name: AboutAnime;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+    }
+    #gallery {
+      background: #333;
+
+    }
+    .Mansory{
+      background: #2196f3;
+      max-width: 800px;
+      padding: 0.5rem;
+      margin: 0 auto;
+      border-radius: 10px;
+      grid-gap: 0.5rem;
+      display: grid;
+      grid-template-columns:repeat(auto-fill, minmax(100px 1fr));
+      grid-template-rows: mansory;
+
+    }
+    #gallery .heading h2 {
+      color: #fff;
+    }
+    .mansory div img {
+      object-position: center;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: all 2s ease-in-out;
+
+    }
+    .mansory div img:hover{
+      cursor: pointer;
+      transform: translate(-50px) scale(1);
+    }
+    /* .i1{
+      grid-column: 1/3;
+      grid-row: 1;
+    } */
+    @keyframes AboutAnime {
+      25% {
+        border-radius: 50% 0 0 0;
+
+      }
+      50% {
+        border-radius: 50% 50% 0 0;
+        
+      }
+      75% {
+        border-radius: 50% 50% 50% 0;
+        
+      }
+      100% {
+        border-radius: 50% 50% 50% 50%;
+        
+      }
+    }
+  </style>
 <body>
         <div class="navbar">
                 <a href="Index.html">Home</a>
@@ -23,10 +89,34 @@
                     </p>
                   </div> 
                   <div class="column">
-                    <p style="text-align: center">
+                    <p style="text-align: center;">
                         I am a Dedicated and Self Motivated Back-End Web Developer with Intermediate Level Skill in HTML and CSS.</p> <br> <p>I enjoy Building beautiful and elegant Web Applications that put my Skills to a test and Challenge my Creativity and Intellect. </p><br> <p>I am Passionate about learning new Skill Sets and expanding my horizons so as to stay updated with the latest in the world of Tech. </p> <br> <p>I am a Passionate Football Lover and Enjoy having enough Rests during my leisure hours so as to come back to the Drawing Board Stronger but Physically and Mentally. </p><br>
                     </p>
-                  </div>
                 </div>
+          </div>
+          <section id="gallery">
+          <div class="heading">
+            <h2> TIIDELAB Memories So Far!!!!</h2>
+          </div>
+          <main class="Mansory">
+            <div class="a">
+              <img src="./images/1.jpg" width="780px" height="500px">
+            </div>
+            <div class="b">
+              <img src="./images/1a.jpg" width="780px" height="500px">
+            </div>
+            <div class="c"> 
+              <img src="./images/1b.jpg" width="780px" height="500px">
+            </div>
+            <div class="d">
+              <img src="./images/2.jpg" width="780px" height="500px">
+            </div>
+            <div class="e">
+              <img src="./images/3.jpg" width="780px" height="500px">
+            </div>
+            <div class="f">
+              <img src="./images/4.jpg" width="780px" height="500px">
+            </div>
+          </main>
 </body>
 </html>

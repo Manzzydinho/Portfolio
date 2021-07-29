@@ -5,25 +5,47 @@
 /* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightskyblue;
+  color: black;
+
+
 
 }
-
-section {
-    padding: 10px;
-    margin: 10px;
-    background-color: lightskyblue;
-    color: black;
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  margin : 0;
+  top: 0;
 }
 
 footer {
-    /* padding: 10px;
-    margin: 10px; */
-    position: sticky;
-    position: -webkit-sticky;
-    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px;
     background-color: #333;
+    animation-name: Animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
 }
+
+@keyframes Animation {
+  from {
+    width: 300px;
+  }
+
+  to {
+    width: 600px;
+    background-color: #666;
+    
+  }
+  
 
 
 /* Header/logo Title */
@@ -39,13 +61,7 @@ footer {
   font-size: 40px;
 }
 
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+
   
   
 }
@@ -172,5 +188,8 @@ input[type=text], select, textarea {
   .navbar a {
     float: none;
     width: 100%;
+  }
+
+
   }
 }

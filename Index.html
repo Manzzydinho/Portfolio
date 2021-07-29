@@ -6,13 +6,61 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Index</title>
         <link rel="stylesheet" href="styling.css">
+        <style>
+            .menu{
+                position: fixed;
+                top: 75px;
+                left: -100%;
+                display: block;
+                padding : 100px 50px;
+                text-align: center;
+                height: 100vh;
+                width: 100%;
+                background: rgb(90, 87, 87);
+                transition: 0.5s;
+                z-index: 1000;
+                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                opacity: 0.8;
+                }
+                .menu.active{
+                    left: 0;
+                }
+                header ul li a {
+                    color: #111;
+                    font-size: 24px;
+                    margin: 10px;
+                }
+                .toggle {
+                    width: 40px;
+                    height: 40px;
+                    color: #000;
+                    background: url(/images/4.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 70px;
+                    cursor: pointer;
+                }
+                .toggle.active {
+                    background: url(/images/3b.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 50px;
+                    cursor: pointer;
+                }
+        </style>
     </head>
     <body>
-        <div class="navbar">
-            <a href="Work.html">Works</a>
-            <a href="About.html">About</a>
-            <a href="Contact.html">Contact</a>
-        </div>
+        <header>
+        <a href="#" class="logo">Mansur</a> 
+        <div class="toggle" onclick="toggleMenu();">
+        <ul class="menu">
+            <li><a href="Work.html">Works</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="/MUSA MUHAMMAD MANSUR CV (1).pdf" download>Resume</a></li>
+        </ul>
+    </div>
+        </header>
         <section>
         <div>
         <h3>Introduction</h3>
@@ -25,7 +73,7 @@
 
         <h3>Latest Works</h3>
             <ol>Contact Form Design</ol>
-            <p>&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp;This was a Design for just a contact form opage for a dry cleaning company.<br>&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; which was use as an Interview Question for the TIIDELab Fellowship Cohort 3 application.</p>
+            <p>&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp;This was a Design for just a contact form page for a dry cleaning company.<br>&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; which was use as an Interview Question for the TIIDELab Fellowship Cohort 3 application.</p>
             <ol></ol>
         
         </div>
@@ -49,4 +97,12 @@
         </a>
     </p>
     </footer>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var menuToggle = document.querySelector('.toggle');
+        var menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+    </script>
 </html>
